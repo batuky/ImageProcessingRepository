@@ -1,0 +1,7 @@
+#-------FOR WINDOWS----------#
+#installing venv
+py -m pip install --user virtualenv
+#creating virtual env
+py -m venv env
+#activating virtual env
+.\env\Scripts\activate
