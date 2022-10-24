@@ -1,0 +1,7 @@
+The link: https://www.geeksforgeeks.org/python-grayscaling-of-images-using-opencv/
+
+Method 1: Using the cv2.cvtColor() function
+
+Method 2: Using the cv2.imread() function with flag=zero
+
+Method 3: Using the pixel manipulation (Average method)
