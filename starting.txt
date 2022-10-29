@@ -5,3 +5,10 @@ py -m pip install --user virtualenv
 py -m venv env
 #activating virtual env
 .\env\Scripts\activate
+
+
+
+--- index.py order---
+1- edit markdown 
+2- edit week switch (add an elif) 
+3- add a week exercise switch
