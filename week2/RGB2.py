@@ -1,15 +1,17 @@
 import cv2
 import numpy as np
 
-image = cv2.imread('C:\Yazilim\ImageProcessingRepository\images\Fruits.jpeg')
+def rgb2():
 
-imageBlue = image[:,:,0]
-imageGreen = image[:,:,1]
-imageRed = image[:,:,2]
+    image = cv2.imread('C:\Yazilim\ImageProcessingRepository\images\Fruits.jpeg')
 
-new_image = np.hstack((imageBlue,imageGreen,imageRed))
+    imageBlue = image[:,:,0]
+    imageGreen = image[:,:,1]
+    imageRed = image[:,:,2]
 
-cv2.imshow("window",new_image)
+    new_image = np.hstack((imageBlue,imageGreen,imageRed))
+
+    cv2.imshow("window",new_image)
 
 
-cv2.waitKey(0)
+    cv2.waitKey(0)

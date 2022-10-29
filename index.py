@@ -7,6 +7,7 @@ from week1.method1 import method1
 from week1.method2 import method2
 from week1.method3 import method3
 from week2.RGB import rgbToBgr
+from week2.RGB2 import rgb2
 from week3.resize import resize
 
 
@@ -43,6 +44,7 @@ markdown3 = """
 # Second week exercise
 
 Convert BGR and RGB  : 1 \n
+RGB color Blue, Green, Red colors : 2 \n
 \n
 """
 
@@ -75,7 +77,7 @@ def switch(choise):
         md3 = Markdown(markdown3)
         console.print(md3)
         Prompt.illegal_choice_message = "Wrong exercise choice!"
-        workSelection = Prompt.ask("Choose the exercise",choices=["1"])
+        workSelection = Prompt.ask("Choose the exercise",choices=["1", "2",])
         switch3(workSelection) 
     elif choise == "3":
         md4 = Markdown(markdown4)
@@ -101,8 +103,8 @@ def switch2(choise):
 def switch3(choise):
     if choise == "1":
         rgbToBgr()
-    # elif choise == "2":
-    #     method2()
+    elif choise == "2":
+         rgb2()
     # elif choise == "3":
     #     method3()
     else:
