@@ -9,7 +9,7 @@ from week1.method3 import method3
 from week2.RGB import rgbToBgr
 from week2.RGB2 import rgb2
 from week3.resize import resize
-
+from week4.GaussianNoise import addNoise
 
 
 
@@ -56,12 +56,21 @@ markdown4 = """
 Resize an image  : 1 \n
 \n
 """
+
+# 4th week exercise markdown
+markdown5 = """
+
+# Second week exercise
+
+Add gaussian noise on an image  : 1 \n
+\n
+"""
 def main():
     md = Markdown(markdown)
     console.print(md)
     #weekSelection = input("Haftayı seç aga: ")
     Prompt.illegal_choice_message = "Wrong choice!"
-    weekSelection = Prompt.ask("Choose the week",choices=["1", "2", "3"])
+    weekSelection = Prompt.ask("Choose the week",choices=["1", "2", "3", "4"])
     switch(weekSelection)
 
 
@@ -85,6 +94,12 @@ def switch(choise):
         Prompt.illegal_choice_message = "Wrong exercise choice!"
         workSelection = Prompt.ask("Choose the exercise",choices=["1"])
         switch4(workSelection)
+    elif choise == "4":
+        md5 = Markdown(markdown5)
+        console.print(md5)
+        Prompt.illegal_choice_message = "Wrong exercise choice!"
+        workSelection = Prompt.ask("Choose the exercise",choices=["1"])
+        switch5(workSelection)
     else:
         console.print("There is nothing here!",style="error")
 
@@ -114,6 +129,17 @@ def switch3(choise):
 def switch4(choise):
     if choise == "1":
         resize()
+    # elif choise == "2":
+    #     method2()
+    # elif choise == "3":
+    #     method3()
+    else:
+        console.print("There is nothing here!",style="error")
+
+#fourth week exercise switch
+def switch5(choise):
+    if choise == "1":
+        addNoise()
     # elif choise == "2":
     #     method2()
     # elif choise == "3":
