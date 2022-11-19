@@ -53,7 +53,6 @@ def paperAndSalt():
     #Display Histogram
     print(image)
     print(image.ravel())
-    hist = cv2.calcHist([image],[0],None,[256],[0,256])
     plt.hist(image.ravel(),256,[0,256])
     plt.title('Histogram for noise')
     cv2.imshow('Paper and Salt Noise Image', image)

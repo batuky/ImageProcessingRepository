@@ -14,7 +14,14 @@ from week2.logaritmic import logTransformation
 
 from week3.resize import resize
 from week3.negative import getNegative
+
+from week4.readableText import readableText
 from week4.GaussianNoise import addNoise
+
+from week5.convertBit import GrayScaleToBit
+
+from week6.filter import addFilter
+
 from week7.paperAndSalt import paperAndSalt
 
 
@@ -75,6 +82,27 @@ markdown5 = """
 # Fourth week exercise
 
 Add gaussian noise on an image  : 1 \n
+Readable text  : 2 \n
+\n
+"""
+
+# 5th week exercise markdown
+markdown6 = """
+
+# Fifth week exercise
+
+Convert an image to 8, 16 and, 16 bits  : 1 \n
+
+\n
+"""
+
+# 6th week exercise markdown
+markdown7 = """
+
+# Sixth week exercise
+
+Add filters on an image  : 1 \n
+
 \n
 """
 
@@ -97,7 +125,7 @@ def main():
     console.print(md)
     #weekSelection = input("Haftayı seç aga: ")
     Prompt.illegal_choice_message = "Wrong choice!"
-    weekSelection = Prompt.ask("Choose the week",choices=["1", "2", "3", "4", "7"])
+    weekSelection = Prompt.ask("Choose the week",choices=["1", "2", "3", "4", "5", "6", "7"])
     switch(weekSelection)
 
 
@@ -109,30 +137,49 @@ def switch(choise):
         Prompt.illegal_choice_message = "Wrong exercise choice!"
         workSelection = Prompt.ask("Choose the exercise",choices=["1", "2", "3","4"])
         switch2(workSelection) 
+
     elif choise == "2":
         md3 = Markdown(markdown3)
         console.print(md3)
         Prompt.illegal_choice_message = "Wrong exercise choice!"
         workSelection = Prompt.ask("Choose the exercise",choices=["1", "2","3"])
         switch3(workSelection) 
+
     elif choise == "3":
         md4 = Markdown(markdown4)
         console.print(md4)
         Prompt.illegal_choice_message = "Wrong exercise choice!"
         workSelection = Prompt.ask("Choose the exercise",choices=["1","2"])
         switch4(workSelection)
+
     elif choise == "4":
         md5 = Markdown(markdown5)
         console.print(md5)
         Prompt.illegal_choice_message = "Wrong exercise choice!"
-        workSelection = Prompt.ask("Choose the exercise",choices=["1"])
+        workSelection = Prompt.ask("Choose the exercise",choices=["1","2"])
         switch5(workSelection)
+
+    elif choise == "5":
+        md6 = Markdown(markdown6)
+        console.print(md6)
+        Prompt.illegal_choice_message = "Wrong exercise choice!"
+        workSelection = Prompt.ask("Choose the exercise",choices=["1"])
+        switch6(workSelection)
+        
+    elif choise == "6":
+        md7 = Markdown(markdown7)
+        console.print(md7)
+        Prompt.illegal_choice_message = "Wrong exercise choice!"
+        workSelection = Prompt.ask("Choose the exercise",choices=["1"])
+        switch7(workSelection)
+
     elif choise == "7":
         md8 = Markdown(markdown8)
         console.print(md8)
         Prompt.illegal_choice_message = "Wrong exercise choice!"
         workSelection = Prompt.ask("Choose the exercise",choices=["1"])
         switch8(workSelection)
+
     else:
         console.print("There is nothing here!",style="error")
 
@@ -154,9 +201,9 @@ def switch3(choise):
     if choise == "1":
         rgbToBgr()
     elif choise == "2":
-         rgb2()
+        rgb2()
     elif choise == "3":
-         logTransformation()
+        logTransformation()
     else:
         console.print("There is nothing here!",style="error")
 
@@ -175,14 +222,29 @@ def switch4(choise):
 def switch5(choise):
     if choise == "1":
         addNoise()
-    # elif choise == "2":
-    #     method2()
+    elif choise == "2":
+        readableText()
     # elif choise == "3":
     #     method3()
     else:
         console.print("There is nothing here!",style="error")
 
-#fourth week exercise switch
+#fifth week exercise switch
+def switch6(choise):
+    if choise == "1":
+        print("5.hafta")
+        GrayScaleToBit()
+    else:
+        console.print("There is nothing here!",style="error")
+
+#sixth week exercise switch
+def switch7(choise):
+    if choise == "1":
+        addFilter()
+    else:
+        console.print("There is nothing here!",style="error")
+
+#seventh week exercise switch
 def switch8(choise):
     if choise == "1":
         paperAndSalt()
