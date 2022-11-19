@@ -20,6 +20,7 @@ def addNoise():
         mean = 0
         var = 0.01
         sigma = np.sqrt(var)
+        #gaussian noise formula paramaters
         n = np.random.normal(loc=mean, scale=sigma, size=(x,y))
 
         cv2.imshow('Gaussian noise', n)
