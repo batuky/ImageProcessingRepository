@@ -7,6 +7,7 @@ import os.path
 
 #A funcion that adding noise on image for main function 
 def add_noise(image):
+    
     row , col = image.shape
     # Randomly pick some pixels in the image for coloring them white
     # Pick a random number between 300 and 10000
